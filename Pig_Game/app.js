@@ -12,28 +12,6 @@ GAME RULES:
 var score, round_score, active_player, game_play;
 init();
 
-
-// console.log(dice);
-
-// document.querySelector('#current-' + active_player).textContent = dice;
-// document.querySelector('#current-' + active_player).innerHTML = '<em>' + dice + '</em>';
-
-// var x = document.querySelector('#score-0').textContent;
-// console.log(x);
-
-////////////////////////////////.style.display to change the property of html
-// document.querySelector('.dice').style.display = 'none';
-
-
-// function btn() {
-
-// }
-// btn();
-                                    ///////////////////////callback function. 
-// document.querySelector('.btn-roll').addEventListener('click', btn);
-
-
-                                            /////////anonimous function  it can only be use once
 document.querySelector('.btn-roll').addEventListener('click', function() {
     if(game_play) {
         var dice = Math.floor(Math.random() * 6)+1;
@@ -47,8 +25,6 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
             document.querySelector('#current-' + active_player).textContent = round_score;
         } else {
             activate_next();
-            // document.querySelector('.player-0-panel').classList.remove('active');
-            // document.querySelector('.player-1-panel').classList.add('active');
         }
     }
 });
@@ -84,7 +60,9 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
     }
 });
 
+
 document.querySelector('.btn-new').addEventListener('click', init);
+
 
 function init() {
     score = [0,0];
